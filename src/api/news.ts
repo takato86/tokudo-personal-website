@@ -17,9 +17,9 @@ export default function getNews(): Array<NewsModel>{
         .then((res: AxiosResponse) => {
             const { data, } = res;
             // TODO forEachでの書き換え？
-            for (const news_title of data.contents){
+            for (const news of data.contents){
                 news_array.push(
-                    new NewsModel(news_title.title)
+                    new NewsModel(news.title, news.content)
                 );
             } 
         })

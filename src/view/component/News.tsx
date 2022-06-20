@@ -38,7 +38,7 @@ export default class News extends React.Component<NewsProps, NewsState>{
                     const news_array: Array<NewsModel> = [];
                     for (const news_title of result.contents){
                         news_array.push(
-                            new NewsModel(news_title.title)
+                            new NewsModel(news_title.title, news_title.content)
                         )
                     };
                     this.setState(
@@ -79,7 +79,7 @@ export default class News extends React.Component<NewsProps, NewsState>{
                             (x: NewsModel) => (
                                 <li key={x.toString()}>
                                     <h2 className="text-2xl font-bold">{x.title}</h2>
-                                    <p>hogehoge</p>
+                                    <p>{x.content}</p>
                                 </li>
                             )
                         )
