@@ -26,7 +26,7 @@ export default class Biography extends React.Component{
                         </div>
                         <div>
                             <h1>Research Interests</h1>
-                            <p>Reinforcement Learning(RL), Interactive RL, Reward from human, Human Agent Interaction, Network Analysis</p>
+                            <p>Reinforcement Learning(RL), Interactive RL, Reward from human, Network Analysis</p>
                         </div>
                         <div>
                             <h1>Education</h1>

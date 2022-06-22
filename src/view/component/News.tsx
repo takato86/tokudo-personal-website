@@ -1,4 +1,5 @@
 import React from 'react';
+import { X_MICROCMS_API_KEY } from '../../constants';
 import NewsModel from '../../model/news';
 import Section from './Section';
 
@@ -11,8 +12,6 @@ type NewsState = {
 type NewsProps = {
     bg_color: string;
 }
-
-
 
 
 export default class News extends React.Component<NewsProps, NewsState>{
@@ -28,7 +27,7 @@ export default class News extends React.Component<NewsProps, NewsState>{
         const fetch_config = {
             method: "GET",
             headers: {
-                "X-MICROCMS-API-KEY": "eece7f873eed40fa98637e65679065a9aa8d",
+                "X-MICROCMS-API-KEY": X_MICROCMS_API_KEY,
             }
         }
         fetch("https://tokudo.microcms.io/api/v1/news", fetch_config)
@@ -61,7 +60,6 @@ export default class News extends React.Component<NewsProps, NewsState>{
     render(){
         var {error, contents, isLoaded}= this.state
         var content = null;
-        console.log(contents);
         if (error){
             content = (
                 <p>Error: {error.message}</p>
@@ -77,7 +75,7 @@ export default class News extends React.Component<NewsProps, NewsState>{
                     {
                         contents.map(
                             (x: NewsModel) => (
-                                <li key={x.toString()}>
+                                <li key={x.title}>
                                     <h2 className="text-2xl font-bold">{x.title}</h2>
                                     <p>{x.content}</p>
                                 </li>
