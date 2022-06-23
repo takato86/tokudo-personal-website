@@ -20,7 +20,7 @@ export default class Biography extends React.Component{
                         <h1 className="text-3xl font-bold">Takato Okudo</h1>
                         </div>
                         <div>
-                        <p className="font-mono mt-2 leading-normal">
+                        <p className="font-mono mt-2 leading-normal text-justify">
                             Hello! I'm <b>Takato Okudo</b>. I'm a software engineer and a researcher. I am interested in the <i>Reinforcement Learing</i> and the learning algorithms.
                         </p>
                         </div>

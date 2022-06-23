@@ -2,9 +2,9 @@
 
 export default class NewsModel {
     title: string
-    content: string
-    constructor(title: string, content: string){
+    datetime: Date
+    constructor(title: string, datetime: string){
         this.title = title
-        this.content = content
+        this.datetime = new Date(datetime)
     }
 } 

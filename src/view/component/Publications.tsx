@@ -68,8 +68,6 @@ export default class Publications extends React.Component<PublicationProps, Publ
     render(){
         var {error, contents, isLoaded}= this.state
         var content = null;
-        console.log(contents)
-        console.log(error)
         if (error){
             content = (
                 <p>Error: {error.message}</p>
@@ -88,7 +86,7 @@ export default class Publications extends React.Component<PublicationProps, Publ
                                     <span>
                                         {x.authors}
                                     </span>:<br/>
-                                    <span>
+                                    <span className='italic'>
                                         {x.title}
                                     </span>,{" "}
                                     <span>

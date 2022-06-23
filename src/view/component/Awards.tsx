@@ -2,6 +2,7 @@ import React from 'react';
 import Section from './Section';
 import AwardModel from '../../model/award';
 import { X_MICROCMS_API_KEY } from '../../constants';
+import { date2str } from '../../common/date';
 
 
 type AwardState = {
@@ -80,13 +81,13 @@ export default class Awards extends React.Component<AwardProps, AwardState>{
                         contents.map(
                             (x: AwardModel) => (
                                 // カルーセルにしたい。
-                                <div className="flex-1 p-4">
+                                <div className="flex-1 p-4" key={x.awardTitle}>
                                     <div className='h-5/6'>
                                         <h1>{x.awardTitle}</h1>
                                         <p>「{x.title}」</p>
                                     </div>
                                     <div className='h-1/6'>
-                                        <p>{x.datetime.toLocaleDateString()}</p>
+                                        <p>{date2str(x.datetime)}</p>
                                     </div>
                                 </div>
                             )

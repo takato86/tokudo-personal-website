@@ -1,4 +1,5 @@
 import React from 'react';
+import { date2str } from '../../common/date';
 import { X_MICROCMS_API_KEY } from '../../constants';
 import NewsModel from '../../model/news';
 import Section from './Section';
@@ -37,7 +38,7 @@ export default class News extends React.Component<NewsProps, NewsState>{
                     const news_array: Array<NewsModel> = [];
                     for (const news_title of result.contents){
                         news_array.push(
-                            new NewsModel(news_title.title, news_title.content)
+                            new NewsModel(news_title.title, news_title.datetime)
                         )
                     };
                     this.setState(
@@ -75,9 +76,8 @@ export default class News extends React.Component<NewsProps, NewsState>{
                     {
                         contents.map(
                             (x: NewsModel) => (
-                                <li key={x.title}>
-                                    <h2 className="text-2xl font-bold">{x.title}</h2>
-                                    <p>{x.content}</p>
+                                <li key={x.title} className="pt-4 px-4">
+                                    <p className='text-left'><span>{date2str(x.datetime)}</span><span className='ml-8'>{x.title}</span></p>
                                 </li>
                             )
                         )
