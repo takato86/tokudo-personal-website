@@ -97,7 +97,7 @@ export default class Awards extends React.Component<AwardProps, AwardState>{
             )
         }
         return(
-            <Section title="Awards" color={this.props.bg_color}>
+            <Section id="awards" title="Awards" color={this.props.bg_color}>
                 {content}
             </Section>
         )

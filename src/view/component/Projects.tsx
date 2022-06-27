@@ -10,7 +10,7 @@ type ProjectProps = {
 export default class Projects extends React.Component<ProjectProps, {}>{
     render(){
         return(
-            <Section title="Projects" color={this.props.bg_color}>
+            <Section id="projects" title="Projects" color={this.props.bg_color}>
                 {/* カルーセルにしたい。 */}
                 <div className='py-4 flex'>
                     <div className='flex-1 p-4 mx-auto'>

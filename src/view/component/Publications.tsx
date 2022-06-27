@@ -115,7 +115,7 @@ export default class Publications extends React.Component<PublicationProps, Publ
             )
         }
         return (
-        <Section title="Publication" color={this.props.bg_color}>
+        <Section id="publications" title="Publication" color={this.props.bg_color}>
             {content}
         </Section>
         )

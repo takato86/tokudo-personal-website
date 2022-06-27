@@ -8,7 +8,7 @@ type EducationProps = {
 export default class Educations extends React.Component<EducationProps, {}>{
     render(){
         return(
-            <Section title="Education" color={this.props.bg_color}>
+            <Section id="education" title="Education" color={this.props.bg_color}>
                 <div>
                     <h1>
                     National Institute of Technology, Nara college

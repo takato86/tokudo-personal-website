@@ -9,7 +9,7 @@ type ExperienceProps = {
 export default class Experiences extends React.Component<ExperienceProps, {}>{
     render(){
         return(
-            <Section title="Experiences" color={this.props.bg_color}>
+            <Section id="experiences" title="Experiences" color={this.props.bg_color}>
                 <div className='divide-y divide-dashed'>
                     <div>
                         <h1>
