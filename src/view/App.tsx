@@ -8,7 +8,7 @@ import Projects from './component/Projects';
 
 function App() {
   return (
-    <div className="App bg-white">
+    <div className="App bg-white font-mono">
       <Header />
       <Biography />
       <News bg_color='bg-white'/>

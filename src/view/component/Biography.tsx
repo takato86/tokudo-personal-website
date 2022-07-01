@@ -3,6 +3,19 @@ import React from 'react';
 
 export default class Biography extends React.Component{
     render(){
+        const research_interests: Array<String> = [
+            "Reinforcement Learning(RL)", "Interactive RL", "Reward from human", "Network Analysis"
+        ]
+        const ris =  (
+            <div className='flex'>
+            {
+                research_interests.map((x) => (
+                        <div className='rounded-full bg-slate-500 px-2 py-1 text-xs text-white mr-3'>{x}</div>
+                    )
+                )
+            }
+            </div>
+        )
         return(
             <div className='container bg-white min-w-full py-12'>
                 <div className="max-w-5xl mx-auto md:flex">
@@ -20,16 +33,16 @@ export default class Biography extends React.Component{
                         <h1 className="text-3xl font-bold">Takato Okudo</h1>
                         </div>
                         <div>
-                        <p className="font-mono mt-2 leading-normal text-justify">
+                        <p className="mt-2 leading-normal text-justify">
                             Hello! I'm <b>Takato Okudo</b>. I'm a software engineer and a researcher. I am interested in the <i>Reinforcement Learing</i> and the learning algorithms.
                         </p>
                         </div>
-                        <div>
-                            <h1>Research Interests</h1>
-                            <p>Reinforcement Learning(RL), Interactive RL, Reward from human, Network Analysis</p>
+                        <div className='text-left mt-3'>
+                            <h1 className='font-bold'>Research Interests</h1>
+                            {ris}
                         </div>
-                        <div>
-                            <h1>Education</h1>
+                        <div className='text-left mt-3'>
+                            <h1 className='font-bold'>Education</h1>
                             <p>Ph.D. (Expected 2023), The Graduate University for Advanced Studies, Kanagawa, Japan</p>
                             <p>Bachelors of Informatics (2018), National Institute of Technology, Nara College, Nara, Japan</p>
                         </div>

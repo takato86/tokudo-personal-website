@@ -9,7 +9,7 @@ export default class Header extends React.Component{
                 <nav className="ml-auto">
                     <ul className="flex m-0">
                         <li className="ml-5">
-                            <a href="#news">News</a>
+                        <a href="#news">News</a>
                         </li>
                         <li className="ml-5">
                             <a href="#publications">Publication</a>
