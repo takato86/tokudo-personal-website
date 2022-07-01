@@ -6,7 +6,6 @@ import Section from './Section';
 
 
 type NewsState = {
-    error: any
     contents: Array<NewsModel>
     isLoaded: boolean
 }
@@ -19,7 +18,6 @@ export default class News extends React.Component<NewsProps, NewsState>{
     constructor(props: NewsProps){
         super(props);
         this.state = {
-            'error': null,
             'contents': [],
             'isLoaded': false
         }
@@ -48,10 +46,9 @@ export default class News extends React.Component<NewsProps, NewsState>{
                         }
                     )
                 },
-                (error) => {
+                () => {
                     this.setState(
                         {
-                            error: error,
                             isLoaded: false
                         }
                     )
@@ -59,14 +56,9 @@ export default class News extends React.Component<NewsProps, NewsState>{
             )
     }
     render(){
-        var {error, contents, isLoaded}= this.state
+        var {contents, isLoaded}= this.state
         var content = null;
-        if (error){
-            content = (
-                <p>Error: {error.message}</p>
-            )
-        }
-        else if (!isLoaded){
+        if (!isLoaded){
             content = (
                 <p>Loading...</p>
             )

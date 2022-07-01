@@ -25,7 +25,7 @@ export default class Biography extends React.Component{
                         width={400}
                         src={"/images/okudo_profile_resized.jpg"}
                         alt="Takato Okudo"
-                        className="aspect-square p-4 mx-auto rounded-full object-cover"
+                        className="w-80 h-80 aspect-square p-4 mx-auto my-auto rounded-full object-cover"
                     />
                     {/* プロフィール説明文 */}
                     <div className='md:w-2/3 h-fit my-auto p-6 mx-auto'>
@@ -46,7 +46,12 @@ export default class Biography extends React.Component{
                             <p>Ph.D. (Expected 2023), The Graduate University for Advanced Studies, Kanagawa, Japan</p>
                             <p>Bachelors of Informatics (2018), National Institute of Technology, Nara College, Nara, Japan</p>
                         </div>
-                        
+                        <div id="related" className='flex mt-6 items-center max-w-xs mx-auto'>
+                            <a href="https://twitter.com/okudotakato" id="twitter" className='mx-auto'><img src="/images/twitter_logo.svg" alt="twitter" className='w-10'/></a>
+                            <a href="https://github.com/takato86" id="github" className='mx-auto'><img src="/images/github_logo.png" alt="github" className='w-10'/></a>
+                            <a href="https://www.linkedin.com/in/okudo-takato-7911ba127/" id="linkedin" className='mx-auto'><img src="/images/linkedin_logo.png" alt="linkedin" className='w-10'/></a>
+                            <a href="https://qiita.com/tokudo" id="qiita" className='mx-auto'><img src="/images/qiita_logo.png" alt="qiita" className='w-10'/></a>
+                        </div>
                     </div>
                 </div>
             </div>

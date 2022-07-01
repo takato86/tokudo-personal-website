@@ -6,7 +6,6 @@ import { date2str } from '../../common/date';
 
 
 type AwardState = {
-    error: any
     contents: Array<AwardModel>
     isLoaded: boolean
 }
@@ -20,7 +19,6 @@ export default class Awards extends React.Component<AwardProps, AwardState>{
     constructor(props: AwardProps){
         super(props);
         this.state = {
-            'error': null,
             'contents': [],
             'isLoaded': false
         }
@@ -52,10 +50,9 @@ export default class Awards extends React.Component<AwardProps, AwardState>{
                         }
                     )
                 },
-                (error) => {
+                () => {
                     this.setState(
                         {
-                            error: error,
                             isLoaded: false
                         }
                     )
@@ -63,14 +60,9 @@ export default class Awards extends React.Component<AwardProps, AwardState>{
             )
     }
     render(){
-        var {error, contents, isLoaded}= this.state
+        var {contents, isLoaded}= this.state
         var content = null;
-        if (error){
-            content = (
-                <p>Error: {error.message}</p>
-            )
-        }
-        else if (!isLoaded){
+        if (!isLoaded){
             content = (
                 <p>Loading...</p>
             )

@@ -5,7 +5,6 @@ import { X_MICROCMS_API_KEY } from '../../constants';
 
 
 type PublicationState = {
-    error: any,
     contents: Array<PublicationModel>
     isLoaded: boolean
 }
@@ -20,7 +19,6 @@ export default class Publications extends React.Component<PublicationProps, Publ
     constructor(props: PublicationProps){
         super(props);
         this.state = {
-            'error': null,
             'contents': [],
             'isLoaded': false
         }
@@ -54,10 +52,9 @@ export default class Publications extends React.Component<PublicationProps, Publ
                         }
                     )
                 },
-                (error) => {
+                () => {
                     this.setState(
                         {
-                            error: error,
                             isLoaded: false
                         }
                     )
@@ -66,13 +63,10 @@ export default class Publications extends React.Component<PublicationProps, Publ
     }
     
     render(){
-        var {error, contents, isLoaded}= this.state
+        var {contents, isLoaded}= this.state
         var content = null;
-        if (error){
-            content = (
-                <p>Error: {error.message}</p>
-            )
-        } else if (!isLoaded){
+
+        if (!isLoaded){
             content = (
                 <p>Loading...</p>
             )

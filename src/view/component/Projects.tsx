@@ -31,7 +31,7 @@ export default class Projects extends React.Component<ProjectProps, {}>{
                             <div className='mx-auto'>
                                 <img src='/images/remotiive.png' alt='remotiive' className='max-h-56 mx-auto'/>
                             </div>
-                        <h1>REMOTIIVEの製品企画</h1>
+                        <h1>バーチャルオフィスツール REMOTIIVE</h1>
                         </a>
                     </div>
                 </div>
