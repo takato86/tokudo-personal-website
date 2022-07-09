@@ -1,4 +1,6 @@
 import React from 'react';
+import { changeLanguage } from 'i18next';
+import { Translation } from 'react-i18next';
 
 
 export default class Header extends React.Component{
@@ -9,22 +11,38 @@ export default class Header extends React.Component{
                 <nav className="ml-auto">
                     <ul className="hidden md:flex md:m-0">
                         <li className="ml-5">
-                        <a href="#news">News</a>
+                            <Translation>
+                                {
+                                    t => <a href="#news">{t("news_title")}</a>
+                                }
+                            </Translation>
                         </li>
                         <li className="ml-5">
-                            <a href="#publications">Publication</a>
+                            <Translation>
+                                {
+                                    t => <a href="#publications">{t("publication_title")}</a>
+                                }
+                            </Translation>
                         </li>
                         <li className="ml-5">
-                            <a href="#awards">Awards</a>
+                            <Translation>
+                                {
+                                    t => <a href="#awards">{t("award_title")}</a>
+                                }
+                            </Translation>
                         </li>
                         <li className="ml-5">
-                            <a href="#projects">Projects</a>
+                            <Translation>
+                                {
+                                    t => <a href="#projects">{t("project_title")}</a>
+                                }
+                            </Translation>
                         </li>
                     </ul>
                 </nav>
-                <select name="language" className='cursor-pointer rounded-md p-1 ml-10'>
-                    <option value="eng">English</option>
-                    <option value="jpn">日本語</option>
+                <select name="language" className='cursor-pointer rounded-md p-1 ml-10' onChange={ e => changeLanguage(e.target.value)}>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
                 </select>
             </header>
         );

@@ -10,7 +10,7 @@ type ProjectProps = {
 export default class Projects extends React.Component<ProjectProps, {}>{
     render(){
         return(
-            <Section id="projects" title="Projects" color={this.props.bg_color}>
+            <Section id="projects" i18n_title_id="project_title" color={this.props.bg_color}>
                 {/* カルーセルにしたい。 */}
                 <div className='py-4 flex'>
                     <div className='flex-1 p-4 mx-auto'>
@@ -20,7 +20,7 @@ export default class Projects extends React.Component<ProjectProps, {}>{
                             <div className='mx-auto'>
                                 <img src='/images/datumix_dx.jpg' alt='datumix-dx' className='max-h-56 mx-auto'/>
                             </div>
-                            <h1>デジタルツイン×AI で物流DXを推進するスタートアップが、出庫時間を20％短縮する「AIアルゴリズム」の特許を取得</h1>
+                            <h1 className="pt-3">デジタルツイン×AI で物流DXを推進するスタートアップが、出庫時間を20％短縮する「AIアルゴリズム」の特許を取得</h1>
                         </a>
 
                     </div>
@@ -31,7 +31,7 @@ export default class Projects extends React.Component<ProjectProps, {}>{
                             <div className='mx-auto'>
                                 <img src='/images/remotiive.png' alt='remotiive' className='max-h-56 mx-auto'/>
                             </div>
-                        <h1>バーチャルオフィスツール REMOTIIVE</h1>
+                            <h1 className="pt-3">バーチャルオフィスツール REMOTIIVE</h1>
                         </a>
                     </div>
                 </div>

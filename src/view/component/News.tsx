@@ -78,7 +78,7 @@ export default class News extends React.Component<NewsProps, NewsState>{
             )
         }
         return (
-            <Section id="news" title="News" color={this.props.bg_color}>
+            <Section id="news" i18n_title_id="news_title" color={this.props.bg_color}>
                 {content}
             </Section>
         )

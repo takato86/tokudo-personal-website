@@ -1,4 +1,6 @@
+import { t } from 'i18next';
 import React from 'react';
+import {Translation} from 'react-i18next';
 
 
 export default class Biography extends React.Component{
@@ -30,22 +32,46 @@ export default class Biography extends React.Component{
                     {/* プロフィール説明文 */}
                     <div className='h-fit my-auto p-10 mx-auto'>
                         <div>
-                        <h1 className="text-3xl font-bold">Takato Okudo</h1>
+                            <Translation>
+                                {
+                                    t => <h1 className="text-3xl font-bold">{t('name')}</h1>
+                                }
+                            </Translation>
                         </div>
                         <div>
-                        <p className="mt-2 leading-normal md:text-justify">
-                            Hello! I'm <b>Takato Okudo</b>. I'm a software engineer and a researcher. I am interested in the <i>Reinforcement Learing(RL)</i> and the learning algorithms.
-                        </p>
+                            <Translation>
+                                {
+                                    t => <p className="mt-2 leading-normal md:text-justify">{t('intro')}</p>
+                                }
+                            </Translation>
                         </div>
                         <div className='text-left mt-3'>
-                            <h1 className='font-bold'>Research Interests</h1>
+                            <Translation>
+                                {
+                                    t => <h1 className='font-bold'>{t("keyword_title")}</h1>
+                                }
+                            </Translation>
                             {ris}
                         </div>
                         <div className='text-left mt-3'>
-                            <h1 className='font-bold'>Education</h1>
+                            <Translation>
+                                {
+                                    t => <h1 className='font-bold'>{t("education_title")}</h1>
+                                }
+                            </Translation>
+                            
                             <ul className='list-disc md:text-justify pl-5'>
-                                <li key="phd">Ph.D. (Expected 2023), The Graduate University for Advanced Studies, Kanagawa, Japan</li>
-                                <li key="bachelor">Bachelors of Informatics (2018), National Institute of Technology, Nara College, Nara, Japan</li>
+                                <Translation>
+                                {
+                                    t => <li key="phd">{t("phd")}</li>
+                                }
+                                </Translation>
+                                <Translation>
+                                    {
+                                        t => <li key="bachelor">{t("bachelor")}</li>
+                                    }
+                                </Translation>
+                                
                             </ul>
                         </div>
                         <div id="related" className='flex mt-6 items-center max-w-xs mx-auto'>
